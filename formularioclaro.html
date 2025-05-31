@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Servicios Claro</title>
+   <link rel="stylesheet" href="css/claro.css">
+   
+</head>
+<body>
+    </head>
+<body>
+
+    <div class="container">
+        <header>
+            <img src="imagenes/logo claro.jpeg" alt="Logo de Claro" class="logo">
+            <h1>Formulario de Registro</h1>
+            <p>Por favor complete los campos requeridos</p>
+        </header>
+        
+        <form>
+            <div class="section-title">Información Personal</div>
+            
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="primer_nombre" class="required">Primer Nombre</label>
+                    <input type="text" id="primer_nombre" name="primer_nombre" required>
+                </div>
+                <div class="form-col">
+                    <label for="segundo_nombre">Segundo Nombre</label>
+                    <input type="text" id="segundo_nombre" name="segundo_nombre">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="primer_apellido" class="required">Primer Apellido</label>
+                    <input type="text" id="primer_apellido" name="primer_apellido" required>
+                </div>
+                <div class="form-col">
+                    <label for="segundo_apellido">Segundo Apellido</label>
+                    <input type="text" id="segundo_apellido" name="segundo_apellido">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="required">Sexo</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="masculino" name="sexo" value="Masculino" required>
+                        <label for="masculino">Masculino</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="femenino" name="sexo" value="Femenino">
+                        <label for="femenino">Femenino</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="fecha_nacimiento" class="required">Fecha de Nacimiento</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                </div>
+                <div class="form-col">
+                    <label for="ciudad_nacimiento" class="required">Ciudad de Nacimiento</label>
+                    <select id="ciudad_nacimiento" name="ciudad_nacimiento" required>
+                        <option value="">Seleccione una ciudad</option>
+                        <option value="Santo Domingo">Santo Domingo</option>
+                        <option value="Azua">Azua</option>
+                        <option value="Baoruco">Baoruco</option>
+                        <option value="Barahona">Barahona</option>
+                        <option value="Dajabón">Dajabón</option>
+                        <option value="Distrito Nacional">Distrito Nacional</option>
+                        <option value="Duarte">Duarte</option>
+                        <option value="Elías Piña">Elías Piña</option>
+                        <option value="El Seibo">El Seibo</option>
+                        <option value="Espaillat">Espaillat</option>
+                        <option value="Hato Mayor">Hato Mayor</option>
+                        <option value="Hermanas Mirabal">Hermanas Mirabal</option>
+                        <option value="Independencia">Independencia</option>
+                        <option value="La Altagracia">La Altagracia</option>
+                        <option value="La Romana">La Romana</option>
+                        <option value="La Vega">La Vega</option>
+                        <option value="María Trinidad Sánchez">María Trinidad Sánchez</option>
+                        <option value="Monseñor Nouel">Monseñor Nouel</option>
+                        <option value="Monte Cristi">Monte Cristi</option>
+                        <option value="Monte Plata">Monte Plata</option>
+                        <option value="Pedernales">Pedernales</option>
+                        <option value="Peravia">Peravia</option>
+                        <option value="Puerto Plata">Puerto Plata</option>
+                        <option value="Samaná">Samaná</option>
+                        <option value="Sánchez Ramírez">Sánchez Ramírez</option>
+                        <option value="San Cristóbal">San Cristóbal</option>
+                        <option value="San José de Ocoa">San José de Ocoa</option>
+                        <option value="San Juan">San Juan</option>
+                        <option value="San Pedro de Macorís">San Pedro de Macorís</option>
+                        <option value="Santiago">Santiago</option>
+                        <option value="Santiago Rodríguez">Santiago Rodríguez</option>
+                        <option value="Valverde">Valverde</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="pais_origen" class="required">País de Origen</label>
+                    <select id="pais_origen" name="pais_origen" required>
+                        <option value="">Seleccione un país</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Haiti">Haití</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Costa Rica">Costa Rica</option>
+                        <option value="Cuba">Cuba</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Guatemala">Guatemala</option>
+                        <option value="Honduras">Honduras</option>
+                        <option value="Mexico">México</option>
+                        <option value="Nicaragua">Nicaragua</option>
+                        <option value="Panama">Panamá</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Puerto Rico">Puerto Rico</option>
+                        <option value="Peru">Perú</option>
+                        <option value="Republica Dominicana">República Dominicana</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Venezuela">Venezuela</option>
+                    </select>
+                </div>
+                <div class="form-col">
+                    <label for="estado_civil" class="required">Estado Civil</label>
+                    <select id="estado_civil" name="estado_civil" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="Soltero">Soltero/a</option>
+                        <option value="Casado">Casado/a</option>
+                        <option value="Divorciado">Divorciado/a</option>
+                        <option value="Viudo">Viudo/a</option>
+                        <option value="Union libre">Unión libre</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="section-title">Información de Contacto</div>
+            
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="numero_cedula" class="required">Número de Cédula</label>
+                    <input type="text" id="numero_cedula" name="numero_cedula" required>
+                </div>
+                <div class="form-col">
+                    <label for="numero_celular" class="required">Número de Celular</label>
+                    <input type="tel" id="numero_celular" name="numero_celular" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="telefono_trabajo">Teléfono del Trabajo</label>
+                    <input type="tel" id="telefono_trabajo" name="telefono_trabajo">
+                </div>
+                <div class="form-col">
+                    <label for="correo_electronico" class="required">Correo Electrónico</label>
+                    <input type="email" id="correo_electronico" name="correo_electronico" required>
+                </div>
+            </div>
+            
+            <div class="section-title">Solicitud de Servicio</div>
+            
+            <div class="form-group">
+                <label for="servicio" class="required">Servicios a Solicitar</label>
+                <select id="servicio" name="servicio" required>
+                    <option value="">Seleccione un servicio</option>
+                    <option value="Internet Movil">Internet Móvil</option>
+                    <option value="Internet Fijo">Internet Fijo</option>
+                    <option value="Fibra Optica">Fibra Óptica</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="documentos">Documentos Requeridos</label>
+                <p style="color: #666; font-size: 14px; margin-bottom: 8px;">Por favor adjunte copia de su documento de identidad y comprobante de domicilio</p>
+                <input type="file" id="documentos" name="documentos" class="file-input" multiple>
+            </div>
+            
+            <div class="form-group">
+                <label for="comentarios">Comentarios y Recomendaciones</label>
+                <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escriba aquí cualquier observación o información adicional que considere relevante..."></textarea>
+            </div>
+            
+            <div class="button-group">
+                <button type="reset">Limpiar</button>
+                <button type="submit">Enviar Solicitud</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        Derechos reservados - Ing. Yomarky Reyes
+    </footer>
+
+</body>
+</html>

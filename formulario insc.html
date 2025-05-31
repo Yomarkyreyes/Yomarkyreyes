@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Inscripción a Competencia Escolar</title>
+</head>
+<body>
+    <h1>Formulario de Inscripción a Competencia Escolar</h1>
+    
+    <p align="justify">Use este Formulario de Inscripción a Competencia Escolar para expresar tu intención de participar en la competencia que sea de tu interés. Los organizadores te contactarán para confirmar tu participación y para responder tus preguntas, si es que tienes alguna.</p>
+    
+    <p align="justify">Por favor, confirma tu intención de participar en una competencia escolar mediante la colocación de tu firma en el formulario.</p>
+    
+    <form>
+        <table cellpadding="2" cellspacing="0" border="0">
+            <tr>
+                <td>Nombre completo:</td>
+                <td><input type="text" name="nombre" size="30"></td>
+            </tr>
+            <tr>
+                <td>Curso/Grado:</td>
+                <td><input type="text" name="curso" size="30"></td>
+            </tr>
+            <tr>
+                <td><label for="">Fecha de nacimiento:</label></td>
+                <td><input type="date">
+               
+            </tr>
+            <tr>
+                <td valign="top">Competición en la que quieres participar:</td>
+                <td>
+                    <input type="radio" name="competicion" value="Atletismo"> Atletismo<br>
+                    <input type="radio" name="competicion" value="Debate"> Debate<br>
+                    <input type="radio" name="competicion" value="Olimpiadas"> Olimpiadas matemáticas<br>
+                    <input type="radio" name="competicion" value="Arte"> Arte
+                </td>
+            </tr>
+            <tr>
+                <td>Docente que te prepara para la competición:</td>
+                <td><input type="text" name="docente" size="30"></td>
+            </tr>
+            <tr>
+                <td>Teléfono al que puedes ser contactado:</td>
+                <td><input type="text" name="telefono" size="30"></td>
+            </tr>
+            <tr>
+                <td>Persona de contacto:</td>
+                <td><input type="text" name="contacto" size="30"></td>
+            </tr>
+            <tr>
+                <td>Teléfono de persona de contacto:</td>
+                <td><input type="text" name="telefonoContacto" size="30"></td>
+            </tr>
+            <tr>
+                <td valign="top">¿Tienes alguna pregunta para los organizadores?</td>
+                <td><textarea name="preguntas" rows="4" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td rowspan="6">
+                    <input type="submit" value="Enviar">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

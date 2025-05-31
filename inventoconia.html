@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yomarky Reyes González - Portafolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .header h1 {
+            font-size: 3em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle {
+            font-size: 1.3em;
+            font-weight: 300;
+            font-style: italic;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-content {
+            display: flex;
+            min-height: 500px;
+        }
+
+        .photo-section {
+            flex: 0 0 400px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            position: relative;
+        }
+
+        .photo-placeholder {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+            border: 5px solid rgba(255,255,255,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-placeholder:hover {
+            transform: scale(1.05);
+        }
+
+        .bio-section {
+            flex: 1;
+            padding: 50px;
+            background: white;
+            position: relative;
+        }
+
+        .bio-section h2 {
+            font-size: 2.2em;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            position: relative;
+        }
+
+        .bio-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #e74c3c;
+        }
+
+        .info-grid {
+            display: grid;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .info-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .info-item h3 {
+            color: #2c3e50;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .info-item p {
+            color: #555;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        .skills-section {
+            margin-top: 30px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            transition: transform 0.2s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .social-icons {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2) rotate(10deg);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .facebook {
+            background: linear-gradient(135deg, #1877F2, #42a5f5);
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 1em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+
+            .main-content {
+                flex-direction: column;
+            }
+
+            .photo-section {
+                flex: none;
+                padding: 30px;
+            }
+
+            .photo-placeholder {
+                width: 200px;
+                height: 200px;
+            }
+
+            .bio-section {
+                padding: 30px 20px;
+            }
+
+            .social-icons {
+                position: static;
+                margin-top: 30px;
+                justify-content: center;
+            }
+
+            .header h1 {
+                font-size: 2.2em;
+            }
+
+            .header .subtitle {
+                font-size: 1.1em;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container animate-fadeIn">
+        <div class="header">
+            <h1>Yomarky Reyes González</h1>
+            <p class="subtitle">Estudiante de Ingeniería en Sistemas Computacionales</p>
+        </div>
+
+        <div class="main-content">
+            <div class="photo-section">
+                <div class="photo-placeholder">
+                    <div>
+                        <p></p>
+                        <p style="font-size: 0.9em; margin-top: 10px;">Foto de perfil</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bio-section">
+                <h2>Sobre Mí</h2>
+                
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>🎓 Educación</h3>
+                        <p>Estudiante de Ingeniería en Sistemas Computacionales, apasionado por la tecnología y el desarrollo de software.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>💻 Intereses</h3>
+                        <p>Desarrollo web, programación, bases de datos, inteligencia artificial y nuevas tecnologías emergentes.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>🎯 Objetivos</h3>
+                        <p>Convertirme en un ingeniero de software completo, contribuir a proyectos innovadores y seguir aprendiendo constantemente.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>🌟 Fortalezas</h3>
+                        <p>Pensamiento analítico, resolución de problemas, trabajo en equipo y adaptabilidad a nuevas tecnologías.</p>
+                    </div>
+                </div>
+
+                <div class="skills-section">
+                    <h3 style="color: #2c3e50; margin-bottom: 15px; font-size: 1.4em;">Habilidades Técnicas</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">HTML & CSS</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">Java</div>
+                        <div class="skill-item">Base de Datos</div>
+                        <div class="skill-item">Git & GitHub</div>
+                    </div>
+                </div>
+
+                <div class="social-icons">
+                    <a href="#" class="facebook" title="Facebook">f</a>
+                    <a href="#" class="instagram" title="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Yomarky Reyes González. Todos los derechos reservados.</p>
+            <p style="margin-top: 5px; opacity: 0.8;">Ingeniero en Sistemas Computacionales en formación</p>
+        </div>
+    </div>
+
+    <script>
+        // Animación suave para los elementos
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.info-item, .skill-item');
+            items.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+
+        // Efecto parallax suave en el header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            const scrolled = window.pageYOffset;
+            header.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+    </script>
+</body>
+</html>
+  

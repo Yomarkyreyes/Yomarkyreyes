@@ -1,0 +1,205 @@
+    <style>
+        :root {
+            --primary-color: #e21515;
+            --secondary-color: #ff5a5f;
+            --accent-color: #dd1919;
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+            --success: #28a745;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 15px;
+        }
+
+        .logo {
+            width: 180px;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 28px;
+        }
+
+        header p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+        }
+
+        .form-col {
+            flex: 1 0 280px;
+            padding: 0 10px;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        .required::after {
+            content: "*";
+            color: var(--primary-color);
+            margin-left: 4px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="tel"]:focus,
+        input[type="email"]:focus,
+        input[type="date"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--accent-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 80, 157, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .radio-group {
+            margin-top: 8px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .radio-option input[type="radio"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .file-input {
+            margin-top: 8px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button[type="submit"] {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--secondary-color);
+        }
+
+        button[type="reset"] {
+            background-color: #f8f9fa;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #e9ecef;
+        }
+
+        .section-title {
+            font-size: 18px;
+            color: var(--accent-color);
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 10px;
+            background-color: #ffffff;
+            font-size: 14px;
+            color: #555;
+            margin-top: 30px;
+            border-top: 1px solid #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
